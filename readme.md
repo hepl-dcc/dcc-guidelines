@@ -21,7 +21,7 @@ Cette présente convention, inspiré des recommandations d'[Alsacréations](http
 - Commenter, si nécessaire, le code, les fonctions, les variables. Il devient nécessaire de mettre à jour ces commentaires dès lors que la fonction évolue.
 - Ne jamais laisser un appel à `console.log()` ou `eval()` dans le code en production.
 - Ne pas déclarer de fonctions/variables dans le scope global qui pourraient amener à des conflits avec d’autres scripts. Si besoin, utiliser une [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression). Voyez si votre exécuteur de tâches, par exemple, Webpack, Laravel-mix, etc. ne gèrent pas cela pour vous.
-- En cas de manipulation du *DOM*, nommer les fonctions et plugins d’après les classes HTML avec lesquelles elles vont interagir.
+- En cas de manipulation du _DOM_, nommer les fonctions et plugins d’après les classes HTML avec lesquelles elles vont interagir.
 - Éviter toute forme de redondance ou code dupliqué.
 
 En bonus, suivre les recommandations de :
@@ -30,8 +30,6 @@ En bonus, suivre les recommandations de :
 - [Principe d'écriture d'un code JavaScript cohérent et idiomatique](https://github.com/rwaldron/idiomatic.js/tree/master/translations/fr_FR)
 - [clean-code-JavaScript](https://github.com/ryanmcdermott/clean-code-javascript/blob/master/README.md)
 - [JavaScript The Right Way](https://jstherightway.org/)
-
-
 
 ## Chaines de texte
 
@@ -95,4 +93,3 @@ Exploiter les [propriétés/états](https://www.w3.org/TR/wai-aria/states_and_pr
 Exploiter les [rôles](https://www.w3.org/TR/wai-aria/roles) pour les composants complexes (ex : onglets avec `tab`, `tabpanel`, `tablist`... accordéons et sliders divers).
 
 Vérifier que la navigation au clavier par tabulations suit un cheminement logique et n'est pas capturée par un élément sans possibilité d'en sortir. Ajouter en JavaScript `tabindex="-1"` sur les éléments ne devant plus recevoir le focus (ex : items de formulaire dans un parent masqué par `.visually-hidden`). Utiliser `tabindex` si c'est nécessaire pour changer l'ordre de tabulation (voir [Using the tabindex attribute](https://www.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)).
-
