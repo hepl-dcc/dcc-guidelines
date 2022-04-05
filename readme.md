@@ -6,7 +6,7 @@ Cette présente convention, inspiré des recommandations d'[Alsacréations](http
 
 ## Généralités
 
-- Dans la mesure du possible sur de petits scripts d'agrément (ex.: visuel), JavaScript apporte une amélioration progressive, c’est-à-dire qu’il se produit une dégradation gracieuse lorsqu’il est désactivé (on peut toujours accéder au contenu). Ces scripts doivent être placés de préférence en fin de document, avant la balise `</body>`(ceci n’est plus extrêmement significatif suite aux optimisations des navigateurs, mais permet d’éviter les écueils majeurs et de visualiser l’ordre de chargement au même endroit). Les attributs `defer` et `async` seront utilisés à bon escient pour réduire la latence (voir [Article](http://www.alsacreations.com/astuce/lire/1562-script-attribut-async-defer.html)).
+- Dans la mesure du possible sur de petits scripts d'agrément (ex.: visuel), JavaScript apporte une amélioration progressive, c’est-à-dire qu’il se produit une dégradation gracieuse lorsqu’il est désactivé (on peut toujours accéder au contenu). Ces scripts doivent être placés de préférence à la fin du document, avant la balise `</body>`(ceci n’est plus extrêmement significatif suite aux optimisations des navigateurs, mais permet d’éviter les écueils majeurs et de visualiser l’ordre de chargement au même endroit). Les attributs `defer` et `async` seront utilisés à bon escient pour réduire la latence (voir [Article](http://www.alsacreations.com/astuce/lire/1562-script-attribut-async-defer.html)).
 - L’appel à une librairie ou à un framework (ex: jQuery, Vue, React) fait toujours apparaitre le numéro de version et le suffixe `-min` si le fichier a été minifié.
 - Les scripts de production doivent nécessairement être minifiés et uglifiés vers un seul fichier afin de réduire le nombre et la taille des requêtes.
 
@@ -15,10 +15,10 @@ Cette présente convention, inspiré des recommandations d'[Alsacréations](http
 - L’encodage des fichiers doit se faire en UTF-8.
 - Valider le code avec [eslint](https://eslint.org/).
 - Les indentations se font à l’aide de deux espaces, idéalement définies par [EditorConfig](http://editorconfig.org/).
-- Utiliser la syntaxe _camelCase_ (voir <https://fr.wikipedia.org/wiki/CamelCase>) pour l'écriture des noms de variables, fonctions, objets, etc.
+- Utiliser la syntaxe _[camelCase](https://fr.wikipedia.org/wiki/CamelCase)_ pour l'écriture des noms de variables, fonctions, objets, etc.
 - Utiliser le mot-clé  `let` ou `const` pour déclarer une variable ou une constante et maitriser sa portée.
-- Terminer les instructions par un `;` sauf si la configuration eslint du projet le permet autrement.
-- Commenter, si nécessaire, le code, les fonctions, les variables (à l’aide de `//` ou `/* */`). Il devient nécessaire de mettre à jour ces commentaires dès lors que la fonction évolue.
+- Terminer les instructions par un `;` sauf si la configuration eslint du projet le demande.
+- Commenter, si nécessaire, le code, les fonctions, les variables. Il devient nécessaire de mettre à jour ces commentaires dès lors que la fonction évolue.
 - Ne jamais laisser un appel à `console.log()` ou `eval()` dans le code en production.
 - Ne pas déclarer de fonctions/variables dans le scope global qui pourraient amener à des conflits avec d’autres scripts. Si besoin, utiliser une [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression). Voyez si votre exécuteur de tâches, par exemple, Webpack, Laravel-mix, etc. ne gèrent pas cela pour vous.
 - En cas de manipulation du *DOM*, nommer les fonctions et plugins d’après les classes HTML avec lesquelles elles vont interagir.
