@@ -12,16 +12,16 @@ Cette présente convention, inspiré des recommandations d'[Alsacréations](http
 
 ### Syntaxe
 
-- L’encodage des fichiers et des bases de données doit se faire en UTF-8.
+- L’encodage des fichiers doit se faire en UTF-8.
 - Valider le code avec [eslint](https://eslint.org/).
 - Les indentations se font à l’aide de deux espaces, idéalement définies par [EditorConfig](http://editorconfig.org/).
-- Utiliser la syntaxe _lowerCamelCase_ (voir <https://fr.wikipedia.org/wiki/CamelCase>) pour l'écriture des noms de variables, fonctions, objets, etc.
+- Utiliser la syntaxe _camelCase_ (voir <https://fr.wikipedia.org/wiki/CamelCase>) pour l'écriture des noms de variables, fonctions, objets, etc.
 - Utiliser le mot-clé  `let` ou `const` pour déclarer une variable ou une constante et maitriser sa portée.
 - Terminer les instructions par un `;` sauf si la configuration eslint du projet le permet autrement.
 - Commenter, si nécessaire, le code, les fonctions, les variables (à l’aide de `//` ou `/* */`). Il devient nécessaire de mettre à jour ces commentaires dès lors que la fonction évolue.
 - Ne jamais laisser un appel à `console.log()` ou `eval()` dans le code en production.
 - Ne pas déclarer de fonctions/variables dans le scope global qui pourraient amener à des conflits avec d’autres scripts. Si besoin, utiliser une [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression). Voyez si votre exécuteur de tâches, par exemple, Webpack, Laravel-mix, etc. ne gèrent pas cela pour vous.
-- En cas de manipulation du DOM, nommer les fonctions/plugins d’après les classes HTML avec lesquelles elles vont interagir.
+- En cas de manipulation du *DOM*, nommer les fonctions et plugins d’après les classes HTML avec lesquelles elles vont interagir.
 - Éviter toute forme de redondance ou code dupliqué.
 
 En bonus, suivre les recommandations de :
